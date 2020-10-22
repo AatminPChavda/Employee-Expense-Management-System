@@ -426,7 +426,7 @@ public class MRegister extends javax.swing.JFrame {
         }
           else{
         PreparedStatement ps;
-        String query = "INSERT INTO `Employee`(`M_ID`, `M_Name`, `M_User`, `M_Pass`, `M_Gender`, `M_Department`, `M_Salary`) VALUES (?,?,?,?,?,?,?)";
+        String query = "INSERT INTO `Manager`(`M_ID`, `M_Name`, `M_User`, `M_Pass`, `M_Gender`, `M_Department`, `M_Salary`) VALUES (?,?,?,?,?,?,?)";
      
         try {
             ps = MyConnection.getConnection().prepareStatement(query);
@@ -458,7 +458,7 @@ public class MRegister extends javax.swing.JFrame {
         PreparedStatement ps;
         ResultSet rs;
         boolean checkUser = false;
-        String query = "SELECT * FROM `manager` WHERE `M_User` = ?";
+        String query = "SELECT * FROM `Manager` WHERE `M_User` = ?";
         
         try {
             ps = MyConnection.getConnection().prepareStatement(query);

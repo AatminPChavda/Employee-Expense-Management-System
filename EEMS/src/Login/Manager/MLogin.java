@@ -257,7 +257,7 @@ public class MLogin extends javax.swing.JFrame {
             String user = jTextField1.getText();
             String pass = String.valueOf(jPasswordField1.getPassword());
             
-            String query = "SELECT * FROM `manager` WHERE `M_User` =? AND `M_Pass` =?";
+            String query = "SELECT * FROM `Manager` WHERE `M_User` =? AND `M_Pass` =?";
             
             
             ps = MyConnection.getConnection().prepareStatement(query);
