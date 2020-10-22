@@ -5,6 +5,8 @@
  */
 package Login;
 
+
+import Login.Employee.ELogin;
 import javax.swing.JFrame;
 //import Login.Employee.Elogin;
 
@@ -79,7 +81,7 @@ public class EorM extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Trial a = new Trial();
+        ELogin a = new ELogin();
         a.setVisible(true);
         a.pack();
         a.setLocationRelativeTo(null);
