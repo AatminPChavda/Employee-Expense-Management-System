@@ -1,5 +1,4 @@
-package Login.Employee;
-
+package Login.Manager;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -56,7 +55,7 @@ public class HOME_JFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("You are in Employee");
+        jLabel2.setText("You are in Manager");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

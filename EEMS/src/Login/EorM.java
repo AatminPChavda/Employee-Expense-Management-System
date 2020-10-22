@@ -7,6 +7,7 @@ package Login;
 
 
 import Login.Employee.ELogin;
+import Login.Manager.MLogin;
 import javax.swing.JFrame;
 //import Login.Employee.Elogin;
 
@@ -76,6 +77,12 @@ public class EorM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        MLogin a = new MLogin();
+        a.setVisible(true);
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 

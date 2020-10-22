@@ -1,4 +1,4 @@
-package Login.Employee;
+package Login.Manager;
 
 
 import java.sql.PreparedStatement;
@@ -19,12 +19,12 @@ import javax.swing.JOptionPane;
  *
  * @author vishal
  */
-public class ELogin extends javax.swing.JFrame {
+public class MLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginForm
      */
-    public ELogin() {
+    public MLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -233,11 +233,11 @@ public class ELogin extends javax.swing.JFrame {
 
     private void jLabelRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRegisterMouseClicked
         // TODO add your handling code here:
-        ERegister lgf = new ERegister();
-        lgf.setVisible(true);
-        lgf.pack();
-        lgf.setLocationRelativeTo(null);
-        lgf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MRegister b = new MRegister();
+        b.setVisible(true);
+        b.pack();
+        b.setLocationRelativeTo(null);
+        b.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_jLabelRegisterMouseClicked
 
@@ -257,7 +257,7 @@ public class ELogin extends javax.swing.JFrame {
             String user = jTextField1.getText();
             String pass = String.valueOf(jPasswordField1.getPassword());
             
-            String query = "SELECT * FROM `Employee` WHERE `E_User` =? AND `E_Pass` =?";
+            String query = "SELECT * FROM `manager` WHERE `M_User` =? AND `M_Pass` =?";
             
             
             ps = MyConnection.getConnection().prepareStatement(query);
@@ -283,7 +283,7 @@ public class ELogin extends javax.swing.JFrame {
                 }
             
         } catch (SQLException ex) {
-            Logger.getLogger(ELogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
         
             
@@ -339,13 +339,13 @@ public class ELogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ELogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ELogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ELogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ELogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -355,7 +355,7 @@ public class ELogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ELogin().setVisible(true);
+                new MLogin().setVisible(true);
             }
         });
     }
