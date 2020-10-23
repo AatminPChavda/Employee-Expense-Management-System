@@ -260,7 +260,7 @@ public class ELogin extends javax.swing.JFrame {
             String query = "SELECT * FROM `Employee` WHERE `E_User` =? AND `E_Pass` =?";
             
             
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = E_Connection.getConnection().prepareStatement(query);
             
              ps.setString(1, user);
              ps.setString(2, pass);
@@ -269,7 +269,7 @@ public class ELogin extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                    HOME_JFrame mf = new HOME_JFrame();
+                    E_Home mf = new E_Home();
                     mf.setVisible(true);
                     mf.pack();
                     mf.setLocationRelativeTo(null);
@@ -299,7 +299,7 @@ public class ELogin extends javax.swing.JFrame {
         String query = "SELECT * FROM `the_app_users` WHERE `u_uname` =?";
         
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = E_Connection.getConnection().prepareStatement(query);
             ps.setString(1, username);
             
             rs = ps.executeQuery();

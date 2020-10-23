@@ -429,7 +429,7 @@ public class MRegister extends javax.swing.JFrame {
         String query = "INSERT INTO `Manager`(`M_ID`, `M_Name`, `M_User`, `M_Pass`, `M_Gender`, `M_Department`, `M_Salary`) VALUES (?,?,?,?,?,?,?)";
      
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = M_Connection.getConnection().prepareStatement(query);
             
             ps.setString(1, mid);
             ps.setString(2, name);
@@ -461,7 +461,7 @@ public class MRegister extends javax.swing.JFrame {
         String query = "SELECT * FROM `Manager` WHERE `M_User` = ?";
         
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = M_Connection.getConnection().prepareStatement(query);
             ps.setString(1, username);
             
             rs = ps.executeQuery();

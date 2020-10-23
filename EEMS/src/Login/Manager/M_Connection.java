@@ -1,4 +1,4 @@
-package Login.Employee;
+package Login.Manager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ import java.sql.DriverManager;
  * @author chandradev
  */
 
-public class MyConnection {
+public class M_Connection {
     
      public static Connection getConnection(){
      

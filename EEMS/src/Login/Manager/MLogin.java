@@ -260,7 +260,7 @@ public class MLogin extends javax.swing.JFrame {
             String query = "SELECT * FROM `Manager` WHERE `M_User` =? AND `M_Pass` =?";
             
             
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = M_Connection.getConnection().prepareStatement(query);
             
              ps.setString(1, user);
              ps.setString(2, pass);
@@ -269,7 +269,7 @@ public class MLogin extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                    HOME_JFrame mf = new HOME_JFrame();
+                    M_Home mf = new M_Home();
                     mf.setVisible(true);
                     mf.pack();
                     mf.setLocationRelativeTo(null);
@@ -299,7 +299,7 @@ public class MLogin extends javax.swing.JFrame {
         String query = "SELECT * FROM `the_app_users` WHERE `u_uname` =?";
         
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = M_Connection.getConnection().prepareStatement(query);
             ps.setString(1, username);
             
             rs = ps.executeQuery();

@@ -433,7 +433,7 @@ public class ERegister extends javax.swing.JFrame {
         String query = "INSERT INTO `Employee`(`E_ID`, `E_Name`, `E_User`, `E_Pass`, `E_Gender`, `E_Department`, `E_Salary`) VALUES (?,?,?,?,?,?,?)";
      
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = E_Connection.getConnection().prepareStatement(query);
             
             ps.setString(1, eid);
             ps.setString(2, name);
@@ -465,7 +465,7 @@ public class ERegister extends javax.swing.JFrame {
         String query = "SELECT * FROM `Employee` WHERE `E_User` = ?";
         
         try {
-            ps = MyConnection.getConnection().prepareStatement(query);
+            ps = E_Connection.getConnection().prepareStatement(query);
             ps.setString(1, username);
             
             rs = ps.executeQuery();
