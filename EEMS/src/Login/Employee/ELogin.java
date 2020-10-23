@@ -1,6 +1,7 @@
 package Login.Employee;
 
 
+import EmployeeData.EData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -275,6 +276,10 @@ public class ELogin extends javax.swing.JFrame {
                     mf.setLocationRelativeTo(null);
                  //   mf.setExtendedState(JFrame.MAXIMIZED_BOTH);
                     mf.jLabel1.setText("Welcome "+user+" ");
+                    /*
+                    EData ed = new EData();
+                    ed.Eid=
+                    */
                     
                     this.dispose();
             }
