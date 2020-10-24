@@ -5,8 +5,8 @@
  */
 package Transaction;
 
-import Login.Employee.E_Home;
 import Login.Manager.M_Connection;
+import Login.Manager.M_Home;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,33 +18,35 @@ import net.proteanit.sql.DbUtils;
  *
  * @author aatmin
  */
-public class EP_Request extends javax.swing.JFrame {
+public class M_Reject extends javax.swing.JFrame {
 
     /**
      * Creates new form P_Request
      */
-    public EP_Request() {
+    public M_Reject() {
         initComponents();
         PDisplay();
     }
 
     private void PDisplay()
     {
+        
+        try {
+        
         String pquery = "Select * from `transaction` where status=?";
         
         PreparedStatement ps;
-        try {
-            ps = M_Connection.getConnection().prepareStatement(pquery);
-        
-        
-        ps.setString(1,"p");
+            
+        ps = M_Connection.getConnection().prepareStatement(pquery);
+        ps.setString(1,"r");
         
         ResultSet rs= ps.executeQuery();
         t1.setModel(DbUtils.resultSetToTableModel(rs));
+        
         }
         
         catch (SQLException ex) {
-            Logger.getLogger(EP_Request.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(M_Reject.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -114,7 +116,7 @@ public class EP_Request extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        E_Home mf = new E_Home();
+        M_Home mf = new M_Home();
         mf.setVisible(true);
         mf.pack();
         mf.setLocationRelativeTo(null);
@@ -140,21 +142,23 @@ public class EP_Request extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EP_Request.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(M_Reject.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EP_Request.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(M_Reject.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EP_Request.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(M_Reject.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EP_Request.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(M_Reject.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EP_Request().setVisible(true);
+                new M_Reject().setVisible(true);
             }
         });
     }
