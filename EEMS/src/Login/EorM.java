@@ -5,6 +5,9 @@
  */
 package Login;
 
+
+import Login.Employee.ELogin;
+import Login.Manager.MLogin;
 import javax.swing.JFrame;
 //import Login.Employee.Elogin;
 
@@ -35,6 +38,7 @@ public class EorM extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jButton1.setText("Employee");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -42,6 +46,7 @@ public class EorM extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jButton2.setText("Manager");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,30 +61,36 @@ public class EorM extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addGap(116, 116, 116)
                 .addComponent(jButton2)
-                .addGap(71, 71, 71))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(122, 122, 122)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        MLogin a = new MLogin();
+        a.setVisible(true);
+        a.pack();
+        a.setLocationRelativeTo(null);
+        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Trial a = new Trial();
+        ELogin a = new ELogin();
         a.setVisible(true);
         a.pack();
         a.setLocationRelativeTo(null);
